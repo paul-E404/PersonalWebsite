@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { SlideshowComponent } from './slideshow/slideshow.component';
 import { MenuComponent } from './menu/menu.component';
 import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
+import { FullBodyPictureComponent } from './full-body-picture/full-body-picture.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SlideshowComponent,
     MenuComponent,
-    LegalNoticeComponent
+    LegalNoticeComponent,
+    FullBodyPictureComponent
   ],
   imports: [
     BrowserModule,
