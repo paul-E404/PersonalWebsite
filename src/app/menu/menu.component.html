@@ -1,11 +1,9 @@
-<header>
-    <div class="header-logo-box">
-        <a href="../../index.html"><img class="header-logo" src="../../assets/img/letter_p.png" alt="letter-p"></a>
-    </div>
+<header [class.header-dark]="darkMode">
+    <img routerLink="/" class="header-logo" src="assets/img/letter_p.png" alt="letter-p">
     <div class="header-links">
         <a href="#">About Me</a>
         <a href="#">My Work</a>
         <a href="#">Contact</a>
-        <a href="#">Legal Notice</a>
+        <a routerLink="/legal_notice">Legal Notice</a>
     </div>
 </header>
