@@ -1,5 +1,5 @@
 <app-menu [darkMode]="router.url !== '/'"></app-menu>
-<app-full-body-picture></app-full-body-picture>
+<app-full-body-picture *ngIf="router.url == '/'"></app-full-body-picture>
 <div [class.container]="router.url !== '/'">
     <router-outlet></router-outlet>
 </div>

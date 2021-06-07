@@ -6,7 +6,6 @@ import { SlideshowComponent } from './slideshow/slideshow.component';
 
 const routes: Routes = [
   { path: '', component: SlideshowComponent },
-  { path: '', component: FullBodyPictureComponent }, /* DOES NOT WORK YET */
   { path: 'legal_notice', component: LegalNoticeComponent }
 ];
 
