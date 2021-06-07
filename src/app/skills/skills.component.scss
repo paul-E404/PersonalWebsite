@@ -14,10 +14,37 @@
         border-radius: 12px;
         margin: 20px;
         background-color: var(--bg-color-primary);
-        border: 3px solid rgb(234, 79, 255);
-    }
+        border: 3px solid rgb(0, 255, 242);
 
-    
+        table {
+            height: 100%;
+            padding: 32px;
+
+            tr {
+                height: 52px;
+            }
+
+            td:first-child {
+                padding-right: 24px;
+            }
+
+            td:nth-child(2) {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.skill-bar-max {
+    height: 6px;
+    width: 100%;
+    background-color: rgb(69, 77, 97);
+}
+
+.skill-bar-value {
+    height: 6px;
+    /* width: 50%; */
+    background-color: rgb(205, 79, 255);
 }
 
 .triangle {
@@ -40,7 +67,7 @@
 .skills-image-box {
     height: 700px;
     width: 50px;
-    
+
     img {
         width: 100%;
         height: 700px;

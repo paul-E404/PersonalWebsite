@@ -8,40 +8,33 @@
         <div class="skills-box">
             <div class="skills-box-content">
                 <table>
-                    <thead>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </thead>
                     <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
+                        <tr *ngFor="let skillName of skillsNames; let i = index">
+                            <td>{{ skillName }}</td>
+                            <td>
+                                <div class="skill-bar-max">
+                                    <div [ngStyle]="setBarWidth(i)" class="skill-bar-value"></div>
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
+
         <div class="triangle">
             <div class="triangle-text">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore voluptates sed nostrum harum ipsam. Commodi quam veniam voluptatibus, voluptatum exercitationem repudiandae rerum modi aperiam odit corrupti ipsa quod, qui iure?
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore voluptates sed nostrum harum ipsam.
+                Commodi quam veniam voluptatibus, voluptatum exercitationem repudiandae rerum modi aperiam odit corrupti
+                ipsa quod, qui iure?
             </div>
         </div>
+
         <div class="skills-image-box">
             <img src="/../assets/img/water.jpg" alt="water">
         </div>
+        
     </div>
 </section>
+
+<!-- TODO: Mit For-Schleife Einträge anzeigen, Daten im Array in der .ts speichern. Alles animieren. -->
