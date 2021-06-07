@@ -1,5 +1,11 @@
-<app-menu [darkMode]="router.url !== '/'"></app-menu>
+<app-header [darkMode]="router.url !== '/'"></app-header>
 <app-full-body-picture *ngIf="router.url == '/'"></app-full-body-picture>
-<div [class.container]="router.url !== '/'">
+<app-slideshow></app-slideshow>
+<app-navbar></app-navbar>
+<app-about-me></app-about-me>
+<app-skills></app-skills>
+
+
+<!-- <div [class.container]="router.url !== '/'">
     <router-outlet></router-outlet>
-</div>
+</div> -->

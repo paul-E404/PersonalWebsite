@@ -1,14 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
 
+//Global SCSS variables
+:root {
+    --navbar-height: 50px;
+    --bg-color-primary: rgb(10, 22, 65);
+    --bg-color-secondary: darkcyan;
+    --main-font-size: 20px;
+    --section-heading-hight: 120px;
+}
+
 body {
     margin: 0;
-    font-family: 'Quicksand', sans-serif;
+    font-family: "Quicksand", sans-serif;
     color: white;
-    background-color: rgb(33, 48, 101);
+    background-color: var(--bg-color-primary); 
+    font-size: var(--main-font-size);
 }
 
 a {
     color: white;
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 2em !important;
+    margin-bottom: 0 !important;
+}
+
+.bg-1 {
+    background-color: var(--bg-color-primary); 
+}
+
+.bg-2 {
+    background-color: var(--bg-color-secondary); 
 }
 
 .container {
@@ -18,3 +42,22 @@ a {
     padding-left: 40px;
     padding-right: 40px;
 }
+
+section {
+    height: calc(100vh - var(--navbar-height));
+}
+
+.section-heading {
+    height: var(--section-heading-hight);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.section-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - var(--navbar-height) - var(--section-heading-hight));
+}
+

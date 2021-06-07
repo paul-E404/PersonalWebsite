@@ -11,7 +11,7 @@ export class SlideshowComponent implements OnInit {
 
   images = ['office1.jpg', 'office2.jpg', 'office3.jpg'];
   headlines = [
-    'Amazing Frontend Development 2.0',
+    'German Javascript Frontend Developer',
     'Graduated as Master of Science from WiSo Nuremberg',
     'Fell in love with coding'
   ];
