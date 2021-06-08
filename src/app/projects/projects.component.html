@@ -1,0 +1,20 @@
+<section>
+
+    <div class="section-heading">
+        <h2>MY RECENT PROJECTS</h2>
+    </div>
+
+    <div class="section-content">
+        <div *ngFor="let project of projects; let i = index" class="project-box">
+            <div class="project-image-box">
+                <img src="../../assets/img/{{ projects[i].imageSrc }}" alt="">
+            </div>
+            <div class="project-text-box">
+                <div class="project-description">{{ projects[i].description }}</div>
+                <div class="project-techniques">{{ projects[i].techniques }}</div>
+                <div class="project-documentation">{{ projects[i].documentation }}</div>
+            </div>
+        </div>
+    </div>
+
+</section>

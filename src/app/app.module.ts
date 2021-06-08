@@ -12,6 +12,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { SkillsComponent } from './skills/skills.component';
 import { StartButtonComponent } from './start-button/start-button.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { StartButtonComponent } from './start-button/start-button.component';
     NavbarComponent,
     AboutMeComponent,
     SkillsComponent,
-    StartButtonComponent
+    StartButtonComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
