@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,7 @@ import { FullBodyPictureComponent } from './full-body-picture/full-body-picture.
 import { NavbarComponent } from './navbar/navbar.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { SkillsComponent } from './skills/skills.component';
+import { StartButtonComponent } from './start-button/start-button.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +22,13 @@ import { SkillsComponent } from './skills/skills.component';
     FullBodyPictureComponent,
     NavbarComponent,
     AboutMeComponent,
-    SkillsComponent
+    SkillsComponent,
+    StartButtonComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

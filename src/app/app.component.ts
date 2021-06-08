@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'personal-website';
 
   currentRoute = '';
-
+ 
   constructor(public router: Router) { }
 
 }

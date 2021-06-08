@@ -20,7 +20,6 @@
 .overlay-bar-top {
     bottom: 320px;
     height: 60px;
-    width: 33%;
     animation: topBarGrow 27s ease-in;
     animation-fill-mode: forwards;
 }
@@ -28,7 +27,6 @@
 .overlay-bar-middle {
     bottom: 200px;
     height: 80px;
-    width: 45%;
     animation: middleBarGrow 27s ease-in;
     animation-fill-mode: forwards;
 }
@@ -36,7 +34,6 @@
 .overlay-bar-bottom {
     bottom: 70px;
     height: 90px;
-    width: 60%;
     animation: bottomBarGrow 27s ease-in;
     animation-fill-mode: forwards;
 }

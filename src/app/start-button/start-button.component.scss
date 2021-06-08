@@ -1,0 +1,47 @@
+.learn-more-btn {
+    position: absolute;
+    height: 60px;
+    /* width: 215px; */
+    white-space: nowrap;
+    left: 15%;
+    bottom: 15%;
+    z-index: 1;
+    font-size: 24px;
+    font-family: inherit;
+    font-weight: bold;
+    border: 3px solid rgb(0, 255, 242);
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    overflow: hidden;
+    animation: enlargeStartBtn 1.5s ease-in-out forwards;
+
+    span {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+    
+    &:hover {
+        background-color: rgb(15, 180, 172);
+        transition: background-color 125ms ease-in-out;
+    }
+}
+
+@keyframes enlargeStartBtn {
+    0% {
+        width: 170px;
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    50% {
+        width: 170px;
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    70% {
+        width: 170px;
+    }
+    100% {
+        width: 214px;
+    }
+}
