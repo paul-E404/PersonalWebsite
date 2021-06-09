@@ -1,35 +1,102 @@
+$project-box-height: 600px;
+$project-box-width: 300px;
+$project-box-radius: 50px;
+
 .project-box {
-        height: 600px;
-        width: 300px;
-        margin-left: 40px;
-        margin-right: 40px;
-    
-        img {
-            height: 50%;
-            width: 100%;
-            object-fit: cover;
-        }
+    height: $project-box-height;
+    width: $project-box-width;
+    margin-left: 40px;
+    margin-right: 40px;
+
+    img {
+        height: 50%;
+        width: 100%;
+        object-fit: cover;
+    }
 }
 
 .project-image-box {
-    height: 50%;
-    width: 100%;
+    height: calc(#{$project-box-height} / 2);
+    width: $project-box-width;
+    margin-bottom: 4px;
+    position: relative;
+    cursor: pointer;
 
     img {
         height: 100%;
         object-fit: contain;
+        border-top-right-radius: 50px;
+    }
+}
+
+.circle-project-title {
+    height: 100px;
+    width: 100px;
+    /* border: 3px solid #ffd000; */
+    border: 3px solid #8400ff;
+    border-radius: 50%;
+    background-color: rgba(10, 22, 65, 0.8);
+    position: absolute;
+    top: -40px;
+    left: -30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+        text-align: center;
+        font-weight: bold !important;
     }
 }
 
 .project-text-box {
-    height: 50%;
-    border: 3px solid rgb(255, 208, 0);
-    background-color: rgba(10, 22, 65, 0.5);
+    height: calc(#{$project-box-height} / 2);
+    /* border: 3px solid rgb(255, 208, 0); */
+    /* border: 3px solid #eeff00; */
+    border: 3px solid #8400ff;
+    background-color: var(--bg-color-primary);
     display: flex;
     flex-direction: column;
+    border-bottom-left-radius: 50px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     div {
         font-size: var(--main-font-size);
-        padding: 20px;
+    }
+}
+
+.project-techniques {
+    span:not(:first-child) {
+        font-size: 16px !important;
+    }
+    
+    span:first-child {
+        color:rgb(243, 106, 255);
+    }
+}
+
+.project-documentation {
+    display: flex;
+    justify-content: space-between;
+
+    .doc-btn {
+        height: 40px;
+        width: 120px;
+        font-family: inherit;
+        font-size: 16px;
+        border: 3px solid var(--color-primary);
+        color: white;
+        background-color: transparent;
+        cursor: pointer;
+        border-bottom-left-radius: 25px;
+        border-top-right-radius: 25px;
+
+        &:hover {
+            background-color: rgb(15, 180, 172);
+            transition: background-color 125ms ease-in-out;
+        }
     }
 }

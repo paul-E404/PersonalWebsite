@@ -13,28 +13,28 @@ export class ProjectsComponent implements OnInit {
       'imageSrc': 'el_pollo_loco_small.png',
       'description': 'Here is the description of the project',
       'techniques': ['HTML', 'CSS', 'Javascript'],
-      'documentation': '...'
+      'documentation': 'jsDoc'
     },
     {
       'title': 'Join',
       'imageSrc': 'join_small.png',
       'description': 'Here is the description of the project',
       'techniques': ['HTML', 'CSS', 'Javascript'],
-      'documentation': '...'
+      'documentation': 'jsDoc'
     },
     {
       'title': 'Pokédex',
       'imageSrc': 'pokedex_small.png',
       'description': 'Here is the description of the project',
       'techniques': ['HTML', 'CSS', 'Javascript'],
-      'documentation': '...'
+      'documentation': 'jsDoc'
     },
     {
       'title': 'Ring of Fire',
       'imageSrc': 'rof_small.png',
       'description': 'Here is the description of the project',
       'techniques': ['HTML', 'CSS', 'Javascript'],
-      'documentation': '...'
+      'documentation': 'compoDoc'
     }
   ];
 
