@@ -1,0 +1,122 @@
+section {
+    position: relative;
+}
+
+.section-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start !important;
+}
+
+h2,
+h3 {
+    color: var(--bg-color-primary);
+}
+
+.contact-bg-image {
+    height: calc(100vh - var(--navbar-height));
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../../assets/img/contact_paul.jpg);
+    background-size: cover;
+    background-position-x: -120px;
+    background-repeat: no-repeat;
+    z-index: -5;
+}
+
+.contact-bg-layer {
+    height: 60vh;
+    width: 100%;
+    /* background-color: rgba(7, 16, 58, 0.3); */
+    background-color: rgba(9, 28, 134, 0.3);
+    position: absolute;
+    bottom: 15vh;
+    right: 0;
+    left: 0;
+    z-index: -4;
+}
+
+.contact-form-container {
+    width: 450px;
+    height: 600px;
+    border: 3px solid var(--bg-color-primary);
+    background-color: rgba(7, 9, 95, 0.5);
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-top: 24px;
+
+    form {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        input,
+        textarea,
+        button {
+            background-color: transparent;
+            margin: 20px;
+            padding-left: 12px;
+            padding-right: 12px;
+            font-family: inherit;
+            font-size: 18px;
+            color: white;
+        }
+
+        input:focus,
+        textarea:focus {
+            background-color: rgba(107, 241, 190, 0.3);
+        }
+
+        input {
+            border: 3px solid greenyellow;
+            height: 40px;
+        }
+
+        textarea {
+            border: 3px solid greenyellow;
+            padding-top: 12px;
+        }
+
+        input[id="name"],
+        input[id="email"] {
+            width: 50%;
+        }
+
+        input[id="subject"] {
+            width: 70%;
+        }
+
+        button {
+            height: 40px;
+            width: 135px;
+            border: 3px solid var(--color-primary);
+            cursor: pointer;
+            align-self: flex-end;
+            font-weight: bold;
+
+            &:hover {
+                background-color: rgb(15, 180, 172);
+                transition: background-color 125ms ease-in-out;
+            }
+        }
+    }
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: white;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: white;
+}

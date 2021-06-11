@@ -11,29 +11,29 @@ export class ProjectsComponent implements OnInit {
     {
       'title': 'El Pollo Loco',
       'imageSrc': 'el_pollo_loco_small.png',
-      'description': 'Here is the description of the project',
-      'techniques': ['HTML', 'CSS', 'Javascript'],
+      'description': 'El Pollo Loco is a jump and run browser game made with Javascript. It is playable on keyboard as well on mobile devices with touch functionality.',
+      'techniques': ['HTML', 'CSS', 'JavaScript', 'Canvas drawing'],
       'documentation': 'jsDoc'
     },
     {
       'title': 'Join',
       'imageSrc': 'join_small.png',
-      'description': 'Here is the description of the project',
-      'techniques': ['HTML', 'CSS', 'Javascript'],
+      'description': 'Join is a group project which I developed with two other students of the Developer Akademie. The idea is based on a kanban board.',
+      'techniques': ['HTML', 'CSS', 'JavaScript', 'Registration', 'Login', 'Encrypting', 'Image Upload'],
       'documentation': 'jsDoc'
     },
     {
       'title': 'Pokédex',
       'imageSrc': 'pokedex_small.png',
-      'description': 'Here is the description of the project',
-      'techniques': ['HTML', 'CSS', 'Javascript'],
+      'description': 'Pokédex is an collection of small pokémonsters. The data was fetched from a public Pokémon API.',
+      'techniques': ['HTML', 'CSS', 'JavaScript', 'REST-API', 'Pagination'],
       'documentation': 'jsDoc'
     },
     {
       'title': 'Ring of Fire',
       'imageSrc': 'rof_small.png',
-      'description': 'Here is the description of the project',
-      'techniques': ['HTML', 'CSS', 'Javascript'],
+      'description': 'Ring of Fire, also known as Kings Cup, is a short drinking card game based on Angular. It can be played with up to nine players synchronously on several devices.',
+      'techniques': ['HTML', 'SCSS', 'Keyframes', 'Angular', 'Material Design', 'Google Firebase Backend'],
       'documentation': 'compoDoc'
     }
   ];
