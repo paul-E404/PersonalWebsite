@@ -32,7 +32,7 @@ export class ContactComponent implements OnInit {
           console.log("Die Response nach submit lautet:", response);
         },
         (error) => {
-          console.log(error);
+          console.log("Fehlermeldung von fehlgeschlagenem onSubmit()", error);
         });
   }
 

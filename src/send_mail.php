@@ -49,8 +49,8 @@ switch ($_SERVER['REQUEST_METHOD']) {
         $email = $params->email;
         $subject = $params->subject;
         $message = $params->message;
-
-        $headers = "From: $name <$email>";
+        
+        $headers .= "From: $name <$email>";
 
         mail($recipient, $subject, $message, $headers);
         header("Location: " . $redirect); 
