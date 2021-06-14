@@ -12,11 +12,15 @@
     --footer-height: 160px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: "Quicksand", sans-serif;
     color: white;
-    background-color: var(--bg-color-primary); 
+    background-color: var(--bg-color-primary);
     font-size: var(--main-font-size);
 }
 
@@ -31,11 +35,11 @@ h2 {
 }
 
 .bg-1 {
-    background-color: var(--bg-color-primary); 
+    background-color: var(--bg-color-primary);
 }
 
 .bg-2 {
-    background-color: var(--bg-color-secondary); 
+    background-color: var(--bg-color-secondary);
 }
 
 .container {
@@ -48,6 +52,7 @@ h2 {
 
 section {
     height: calc(100vh - var(--navbar-height));
+    padding-top: var(--navbar-height);
 }
 
 .section-heading {
@@ -73,16 +78,13 @@ button:focus {
 
 /* Change the white to any color */
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active
-{
- -webkit-box-shadow: 0 0 0 30px rgb(46, 48, 146) inset !important;
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px rgb(46, 48, 146) inset !important;
 }
 
 /*Change text in autofill textbox*/
-input:-webkit-autofill
-{
- -webkit-text-fill-color: white !important;
+input:-webkit-autofill {
+    -webkit-text-fill-color: white !important;
 }
-
