@@ -9,18 +9,28 @@
 
     <div class="section-content">
         <h3>Want to get in touch or work together?</h3>
+        <span>{{ singleMessage | json }}</span>
         <div class="contact-form-container">
-            <form action="">
-                <label for="name"></label>
-                <input id="name" type="text" placeholder="your name" required>
-                <label for="email"></label>
-                <input id="email" type="email" placeholder="your email" required>
-                <label for="subject"></label>
-                <input id="subject" type="text" placeholder="subject" required>
-                <label for="message"></label>
-                <textarea id="message" cols="30" rows="10" placeholder="your message" required></textarea>
-                <button>SEND EMAIL</button>
-            </form>
+            <div [hidden]="submitted">
+                <form (ngSubmit)="onSubmit()" ngNativeValidate #contactForm="ngForm">
+                    <label for="name"></label>
+                    <input [(ngModel)]="singleMessage.name" id="name" name="name" type="text" placeholder="your name"
+                        required>
+                    <label for="email"></label>
+                    <input [(ngModel)]="singleMessage.email" id="email" name="email" type="email"
+                        placeholder="your email" required>
+                    <label for="subject"></label>
+                    <input [(ngModel)]="singleMessage.subject" id="subject" name="subject" type="text"
+                        placeholder="subject" required>
+                    <label for="message"></label>
+                    <textarea [(ngModel)]="singleMessage.message" id="message" name="message" cols="30" rows="10"
+                        placeholder="your message" required></textarea>
+                    <button type="submit" (click)="newContactMessage()">SEND EMAIL</button>
+                </form>
+            </div>
+            <div [hidden]="!submitted">
+                <div class="message-sent-info">Your message was succesfully sent.<br>I will respond as soon as possible.<br>Thank you very much!</div>
+            </div>
         </div>
     </div>
 

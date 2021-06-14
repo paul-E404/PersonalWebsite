@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { contactMessage } from '../models/contact-message';
 
 @Component({
   selector: 'app-contact',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
+  singleMessage: contactMessage;
+  submitted: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.singleMessage = new contactMessage('', '', '', '');
+  }
+
+  newContactMessage() {
+    console.log("singleMessage", this.singleMessage);
+  }
+
+  onSubmit() {
+    this.submitted = true;
   }
 
 }
