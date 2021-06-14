@@ -12,7 +12,7 @@
         <span>{{ singleMessage | json }}</span>
         <div class="contact-form-container">
             <div [hidden]="submitted">
-                <form (ngSubmit)="onSubmit()" ngNativeValidate #contactForm="ngForm">
+                <form (ngSubmit)="onSubmit(myForm)" ngNativeValidate #myForm="ngForm">
                     <label for="name"></label>
                     <input [(ngModel)]="singleMessage.name" id="name" name="name" type="text" placeholder="your name"
                         required>

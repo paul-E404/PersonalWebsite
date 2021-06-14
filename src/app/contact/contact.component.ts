@@ -11,7 +11,7 @@ export class ContactComponent implements OnInit {
 
   singleMessage: contactMessage;
   submitted: boolean = false;
-  serverURL: string = 'http://paul-engerling.developerakademie.com/Modul12/Personal-Website/send_mail.php';
+  endpoint: string = 'http://paul-engerling.developerakademie.com/Modul12/Personal-Website/send_mail.php';
 
   constructor(private http: HttpClient) { }
 
@@ -23,11 +23,17 @@ export class ContactComponent implements OnInit {
     console.log("singleMessage", this.singleMessage);
   }
 
-  onSubmit() {
+  onSubmit(myForm: any) {
     this.submitted = true;
-    this.http.post<contactMessage>(this.serverURL, {title: 'Contact form message example'}).subscribe( data => {
-      console.log("data nach dem Post request", data);
-    });
+    this.http.post(this.endpoint, /* { title: 'Contact form message example' },  */myForm.value)
+      .subscribe(
+        (response) => {
+          console.log("Der Übergabeparameter contactForm in der Funktion onSubmit:", myForm);
+          console.log("Die Response nach submit lautet:", response);
+        },
+        (error) => {
+          console.log(error);
+        });
   }
 
 }

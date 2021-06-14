@@ -14,9 +14,11 @@ $redirect = 'index.html';
 #   This script has been created to send an email to the $recipient
 #   
 #  1) Upload this file to your FTP Server
-#  2) Send a POST rewquest to this file, including
+#  2) Send a POST rewquest to this file, including params like
 #     [name] The name of the sender (Absender)
 #     [message] Message that should be send to you
+#     [email] ...
+#     [subject] ...
 #
 ##################################
 
@@ -39,10 +41,18 @@ switch ($_SERVER['REQUEST_METHOD']) {
     case ("POST"): //Send the email;
         header("Access-Control-Allow-Origin: *");
 
-        $subject = "Contact From " . $_POST['name'];
-        $headers = "From:  noreply@developerakademie.com";
+        $json = file_get_contents('php://input');
 
-        mail($recipient, $subject, $_POST['message'], $headers);
+        $params = json_decode($json);
+
+        $name = $params->name;
+        $email = $params->email;
+        $subject = $params->subject;
+        $message = $params->message;
+
+        $headers = "From: $name <$email>";
+
+        mail($recipient, $subject, $message, $headers);
         header("Location: " . $redirect); 
 
         break;
