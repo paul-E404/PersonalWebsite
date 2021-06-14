@@ -25,7 +25,7 @@
                     <label for="message"></label>
                     <textarea [(ngModel)]="singleMessage.message" id="message" name="message" cols="30" rows="10"
                         placeholder="your message" required></textarea>
-                    <button type="submit" (click)="newContactMessage()">SEND EMAIL</button>
+                    <button type="submit">SEND EMAIL</button>
                 </form>
             </div>
             <div [hidden]="!submitted">

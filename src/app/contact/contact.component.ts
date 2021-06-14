@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { contactMessage } from '../models/contact-message';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -10,8 +11,9 @@ export class ContactComponent implements OnInit {
 
   singleMessage: contactMessage;
   submitted: boolean = false;
+  serverURL: string = 'http://paul-engerling.developerakademie.com/Modul12/Personal-Website/send_mail.php';
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
     this.singleMessage = new contactMessage('', '', '', '');
@@ -23,6 +25,9 @@ export class ContactComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
+    this.http.post<contactMessage>(this.serverURL, {title: 'Contact form message example'}).subscribe( data => {
+      console.log("data nach dem Post request", data);
+    });
   }
 
 }
