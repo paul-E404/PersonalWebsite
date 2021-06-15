@@ -1,14 +1,23 @@
 .slideshow-container {
+    position: relative;
     height: 100vh;
     width: 100%;
     overflow: hidden;
 }
 
 .slideshow-img {
+    position: absolute;
+    display: none;
     height: 100vh;
     width: 100%;
     object-fit: cover;
     object-position: 50% 50%;
+    /* animation: zoomIn 10s ease-in infinite;
+    animation-fill-mode: forwards; */
+}
+
+.animate-img {
+    display: unset !important;
     animation: zoomIn 10s ease-in infinite;
     animation-fill-mode: forwards;
 }

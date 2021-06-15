@@ -15,14 +15,53 @@ export class SlideshowComponent implements OnInit {
     'Graduated as Master of Science from WiSo Nuremberg',
     'Fell in love with coding'
   ];
+
   currentImageIndex = 0;
-  showImage = true;
+  /*  showImage = true; */
+  showImage0 = true;
+  showImage1 = true;
+  showImage2 = false;
+  animateImage0 = true;
+  animateImage1 = false;
+  animateImage2 = false;
 
   ngOnInit(): void {
     this.updateImage();
   }
 
+
   updateImage() {
+    setInterval(() => {
+      this.currentImageIndex++;
+      this.currentImageIndex = this.currentImageIndex % this.images.length;
+      if (this.currentImageIndex == 0) {
+        this.showImage0 = true;
+        this.showImage1 = true;
+        this.showImage2 = false;
+        this.animateImage0 = true;
+        this.animateImage1 = false;
+        this.animateImage2 = false;
+      }
+      else if (this.currentImageIndex == 1) {
+        this.showImage0 = false;
+        this.showImage1 = true;
+        this.showImage2 = true;
+        this.animateImage0 = false;
+        this.animateImage1 = true;
+        this.animateImage2 = false;
+      }
+      else if (this.currentImageIndex == 2) {
+        this.showImage0 = true;
+        this.showImage1 = false;
+        this.showImage2 = true;
+        this.animateImage0 = false;
+        this.animateImage1 = false;
+        this.animateImage2 = true;
+      }
+    }, 10000);
+  }
+  
+/*   updateImage() {
     setInterval(() => {
       this.currentImageIndex++;
       this.currentImageIndex = this.currentImageIndex % this.images.length;
@@ -31,6 +70,6 @@ export class SlideshowComponent implements OnInit {
         this.showImage = true;
       }, 10)
     }, 10000);
-  }
+  } */
 
 }

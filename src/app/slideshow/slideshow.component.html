@@ -1,8 +1,29 @@
 <div class="slideshow-container">
+    <img *ngIf="showImage0" class="slideshow-img" [class.animate-img]="animateImage0" src="assets/img/{{images[0]}}"
+        alt="slideshow-image-0">
+    <img *ngIf="showImage1" class="slideshow-img" [class.animate-img]="animateImage1" src="assets/img/{{images[1]}}"
+        alt="slideshow-image-1">
+    <img *ngIf="showImage2" class="slideshow-img" [class.animate-img]="animateImage2" src="assets/img/{{images[2]}}"
+        alt="slideshow-image-2">
+</div>
+<div class="slideshow-overlay">
+    <div *ngIf="animateImage0" class="slogan-box fade-in">
+        <p>{{ headlines[0] }}</p>
+    </div>
+    <div *ngIf="animateImage1" class="slogan-box fade-in">
+        <p>{{ headlines[1] }}</p>
+    </div>
+    <div *ngIf="animateImage2" class="slogan-box fade-in">
+        <p>{{ headlines[2] }}</p>
+    </div>
+</div>
+
+
+<!-- <div class="slideshow-container">
     <img *ngIf="showImage" class="slideshow-img" src="assets/img/{{images[currentImageIndex]}}" alt="slideshow-image">
 </div>
 <div class="slideshow-overlay">
     <div *ngIf="showImage" class="slogan-box fade-in">
         <p> {{ headlines[currentImageIndex] }} </p>
     </div>
-</div>
+</div> -->
