@@ -21,23 +21,28 @@
     bottom: 320px;
     height: 60px;
     animation: topBarGrow 27s ease-in;
-    animation-fill-mode: forwards;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: forward;
 }
 
 .overlay-bar-middle {
     bottom: 200px;
     height: 80px;
     animation: middleBarGrow 27s ease-in;
-    animation-fill-mode: forwards;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: forward;
 }
 
 .overlay-bar-bottom {
     bottom: 70px;
     height: 90px;
     animation: bottomBarGrow 27s ease-in;
-    animation-fill-mode: forwards;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: forward;
 }
-
 
 @keyframes appear {
     from {
@@ -55,11 +60,17 @@
     3% {
         width: 10%;
     }
-    50% {
+    30% {
+        width: 33%;
+    }
+    60% {
+        width: 10%;
+    }
+    90% {
         width: 33%;
     }
     100% {
-        width: 10%;
+        width: 0%;
     }
 }
 
@@ -70,11 +81,14 @@
     3% {
         width: 55%;
     }
-    50% {
-        width: 45%;
+    30% {
+        width: 20%;
+    }
+    60% {
+        width: 55%;
     }
     100% {
-        width: 55%;
+        width: 0%;
     }
 }
 
@@ -85,11 +99,17 @@
     3% {
         width: 45%;
     }
-    50% {
+    30% {
+        width: 60%;
+    }
+    60% {
+        width: 30%;
+    }
+    80% {
         width: 60%;
     }
     100% {
-        width: 45%;
+        width: 0%;
     }
 }
 
@@ -128,4 +148,3 @@
         width: 60%;
     }
 } */
-
