@@ -31,7 +31,8 @@ a {
 
 h2 {
     font-size: 2em !important;
-    margin-bottom: 0 !important;
+    display: flex;
+    align-items: center;
 }
 
 .bg-1 {
@@ -51,7 +52,8 @@ h2 {
 }
 
 section {
-    height: calc(100vh - var(--navbar-height));
+    /* height: calc(100vh - var(--navbar-height)); */
+    min-height: calc(100vh - var(--navbar-height));
     padding-top: var(--navbar-height);
 }
 
@@ -66,7 +68,9 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - var(--navbar-height) - var(--section-heading-hight));
+    height: calc(100% - var(--navbar-height) - var(--section-heading-hight));
+    padding-top: 40px;
+    padding-bottom: 80px;
 }
 
 input:focus,

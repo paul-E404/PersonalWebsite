@@ -3,7 +3,7 @@ $project-box-width: 300px;
 $project-box-radius: 50px;
 
 .project-box {
-    height: $project-box-height;
+    /* height: $project-box-height; */
     width: $project-box-width;
     margin-left: 40px;
     margin-right: 40px;
@@ -16,7 +16,7 @@ $project-box-radius: 50px;
 }
 
 .project-image-box {
-    height: calc(#{$project-box-height} / 2);
+    /* height: calc(#{$project-box-height} / 2); */
     width: $project-box-width;
     margin-bottom: 4px;
     position: relative;

@@ -6,6 +6,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: flex-start !important;
+    padding-top: 0 !important;
 }
 
 h2,
@@ -13,8 +14,13 @@ h3 {
     color: var(--bg-color-primary);
 }
 
+h3 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
 .contact-bg-image {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     position: absolute;
     top: 0;
@@ -27,12 +33,12 @@ h3 {
 }
 
 .contact-bg-layer {
-    height: 60vh;
+    height: 50vh;
     width: 100%;
     /* background-color: rgba(7, 16, 58, 0.3); */
     background-color: rgba(9, 28, 134, 0.3);
     position: absolute;
-    bottom: 15vh;
+    bottom: 25vh;
     right: 0;
     left: 0;
     z-index: -4;
