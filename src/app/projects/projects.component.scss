@@ -33,7 +33,7 @@ $project-box-radius: 50px;
     height: 100px;
     width: 100px;
     /* border: 3px solid #ffd000; */
-    border: 3px solid #8400ff;
+    border: 3px solid rgb(132, 0, 255);
     border-radius: 50%;
     background-color: rgba(10, 22, 65, 0.8);
     position: absolute;
@@ -42,6 +42,11 @@ $project-box-radius: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &:hover {
+        border: 3px solid rgb(225, 0, 255);
+        background-color: rgba(10, 22, 65, 1);
+    }
 
     span {
         text-align: center;

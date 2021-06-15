@@ -6,20 +6,23 @@
 
     <div class="section-content">
         <div *ngFor="let project of projects; let i = index" class="project-box">
-            <div class="project-image-box">
-                <img src="assets/img/{{ projects[i].imageSrc }}" alt="">
-                <div class="circle-project-title">
-                    <span>{{ projects[i].title }}</span>
+            <a href="{{ projects[i].href }}" target="_blank">
+                <div class="project-image-box">
+                    <img src="assets/img/{{ projects[i].imageSrc }}" alt="">
+                    <div class="circle-project-title">
+                        <span>{{ projects[i].title }}</span>
+                    </div>
                 </div>
-            </div>
+            </a>
             <div class="project-text-box">
                 <div class="project-description">{{ projects[i].description }}</div>
                 <div class="project-techniques">
                     <span>Used techniques:</span><br>&middot;
-                    <span *ngFor="let technique of projects[i].techniques; let j = index">{{ projects[i].techniques[j] }} &middot; </span>
+                    <span *ngFor="let technique of projects[i].techniques; let j = index">{{ projects[i].techniques[j]
+                        }} &middot; </span>
                 </div>
                 <div class="project-documentation">
-                    <button class="doc-btn">Start Project</button>
+                    <a href="{{ projects[i].href }}" target="_blank"><button class="doc-btn">Start Project</button></a>
                     <button class="doc-btn">{{ projects[i].documentation }}</button>
                 </div>
             </div>
