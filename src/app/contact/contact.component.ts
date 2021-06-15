@@ -25,10 +25,10 @@ export class ContactComponent implements OnInit {
 
   onSubmit(myForm: any) {
     this.submitted = true;
-    this.http.post(this.endpoint, /* { title: 'Contact form message example' },  */myForm.value)
+    this.http.post(this.endpoint, myForm.value)
       .subscribe(
         (response) => {
-          console.log("Der Übergabeparameter contactForm in der Funktion onSubmit:", myForm);
+          console.log("Der Typ des Übergabeparameters contactForm in der Funktion onSubmit:", typeof(myForm), "Der Parameter selbst: ", myForm);
           console.log("Die Response nach submit lautet:", response);
         },
         (error) => {

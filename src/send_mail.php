@@ -3,7 +3,7 @@
 ########### CONFIG ###############
 
 $recipient = 'paul_engerling@web.de';
-$redirect = 'index.html';
+//$redirect = 'index.html';
 
 ########### CONFIG END ###########
 
@@ -45,18 +45,27 @@ switch ($_SERVER['REQUEST_METHOD']) {
 
         $params = json_decode($json);
 
+        mb_internal_encoding("UTF-8"); 
+
         $name = $params->name;
         $email = $params->email;
         $subject = $params->subject;
         $message = $params->message;
+
+        $name = mb_encode_mimeheader($name,'UTF-8','Q');
+        /* $email = mb_encode_mimeheader($email,'UTF-8','Q'); */
+        $subject = mb_encode_mimeheader($subject,'UTF-8','Q');
+        /* $message = mb_encode_mimeheader($message,'UTF-8','Q'); */
         
         $headers .= "From: $name <$email>";
 
         mail($recipient, $subject, $message, $headers);
-        header("Location: " . $redirect); 
+        //header("Location: " . $redirect); 
 
         break;
     default: //Reject any non POST or OPTIONS requests.
         header("Allow: POST", true, 405);
         exit;
 }
+
+?>
