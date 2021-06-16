@@ -21,6 +21,8 @@ $project-box-radius: 50px;
     margin-bottom: 4px;
     position: relative;
     cursor: pointer;
+    opacity: 0;
+    transform: translateY(-50px);
 
     img {
         height: 100%;
@@ -42,6 +44,7 @@ $project-box-radius: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: translateX(-50px) rotate(135deg);
 
     &:hover {
         border: 3px solid rgb(225, 0, 255);
@@ -67,6 +70,8 @@ $project-box-radius: 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    opacity: 0;
+    transform: translateY(50px);
 
     div {
         font-size: var(--main-font-size);
@@ -108,5 +113,24 @@ $project-box-radius: 50px;
             background-color: rgb(15, 180, 172);
             transition: background-color 125ms ease-in-out;
         }
+    }
+}
+
+
+/* ANIMATIONS AND KEYFRAMES */
+
+.rotateAndSlideRight {
+    animation: rotateAndSlideRight 1.2s ease-in-out forwards;
+}
+
+@keyframes rotateAndSlideRight {
+    0% {
+        transform: translateX(-50px) rotate(-135deg);
+    }
+    50% {
+        transform: translateX(-50px) rotate(-135deg);
+    }
+    100% {
+        transform: translateX(0) rotate(0);
     }
 }

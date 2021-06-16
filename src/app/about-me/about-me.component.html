@@ -6,8 +6,8 @@
 
     <div class="section-content">
         <div *ngFor="let aboutMeBox of aboutMeImageSources; let i = index" class="about-me-box">
-            <img src="assets/img/{{ aboutMeImageSources[i] }}" alt="">
-            <div class="about-me-text-box">
+            <img animateOnScroll animationName="fadeInSlideDown" src="assets/img/{{ aboutMeImageSources[i] }}" alt="">
+            <div animateOnScroll animationName="fadeInSlideUp" class="about-me-text-box">
                 <div>{{ aboutMeTexts[i] }}</div>
             </div>
         </div>

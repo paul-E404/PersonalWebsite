@@ -5,7 +5,7 @@
     </div>
 
     <div class="section-content">
-        <div class="skills-box">
+        <div animateOnScroll animationName="fadeInSlideUp" class="skills-box">
             <div class="skills-box-content">
                 <table>
                     <tbody>
@@ -13,7 +13,9 @@
                             <td>{{ skillName }}</td>
                             <td>
                                 <div class="skill-bar-max">
-                                    <div [ngStyle]="setBarWidth(i)" class="skill-bar-value"></div>
+                                    <div [ngStyle]="setBarWidth(i)" class="skill-bar-value">
+                                        <div animateOnScroll animationName="fillSkillBar" class="growing-skill-bar"></div>
+                                    </div>
                                 </div>
                             </td>
                         </tr>
@@ -22,7 +24,7 @@
             </div>
         </div>
 
-        <div class="triangle">
+        <div animateOnScroll animationName="fadeInSlideLeft" class="triangle">
             <div class="triangle-text">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore voluptates sed nostrum harum ipsam.
                 Commodi quam veniam voluptatibus, voluptatum exercitationem repudiandae rerum modi aperiam odit corrupti
@@ -30,7 +32,7 @@
             </div>
         </div>
 
-        <div class="skills-image-box">
+        <div animateOnScroll animationName="fadeInSlideLeft" class="skills-image-box">
             <img src="assets/img/skills_image.jpg" alt="water">
         </div>
         

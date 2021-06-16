@@ -10,6 +10,8 @@
         width: 100%;
         object-fit: cover;
         border-radius: 50%;
+        opacity: 0;
+        transform: translateY(-50px);
     }
 }
 
@@ -25,6 +27,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    transform: translateY(50px);
 
     div {
         font-size: var(--main-font-size);

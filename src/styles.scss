@@ -93,3 +93,60 @@ input:-webkit-autofill:active {
 input:-webkit-autofill {
     -webkit-text-fill-color: white !important;
 }
+
+
+/* ANIMATION CLASSES AND KEYFRAMES */
+
+.fadeInSlideDown {
+    animation: fadeInSlideDown 0.8s ease-in-out forwards;
+}
+
+.fadeInSlideUp {
+    animation: fadeInSlideUp 0.8s ease-in-out forwards;
+}
+
+.fadeInSlideLeft {
+    animation: fadeInSlideLeft 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeInSlideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInSlideLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
