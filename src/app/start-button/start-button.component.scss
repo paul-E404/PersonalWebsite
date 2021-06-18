@@ -15,6 +15,7 @@
     cursor: pointer;
     overflow: hidden;
     animation: enlargeStartBtn 1.5s ease-in-out forwards;
+    max-width: fit-content;
 
     span {
         margin-left: 8px;
@@ -43,5 +44,47 @@
     }
     100% {
         width: 214px;
+    }
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media(max-width: 1100px) {
+    .learn-more-btn {
+        left: 12%;
+    }
+}
+
+@media(max-width: 1000px) {
+    .learn-more-btn {
+        height: 50px;
+        font-size: 22px;
+    }
+
+    @keyframes enlargeStartBtn {
+        0% {
+            width: 155px;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        50% {
+            width: 155px;
+            opacity: 1;
+            transform: translateY(0px);
+        }
+        70% {
+            width: 155px;
+        }
+        100% {
+            width: 214px;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .learn-more-btn {
+        bottom: 45%;
+        left: 10%;
     }
 }
