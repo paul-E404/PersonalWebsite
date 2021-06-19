@@ -1,7 +1,6 @@
 .learn-more-btn {
     position: absolute;
     height: 60px;
-    /* width: 215px; */
     white-space: nowrap;
     left: 15%;
     bottom: 15%;
@@ -16,6 +15,7 @@
     overflow: hidden;
     animation: enlargeStartBtn 1.5s ease-in-out forwards;
     max-width: fit-content;
+    z-index: 3;
 
     span {
         margin-left: 8px;
@@ -86,5 +86,37 @@
     .learn-more-btn {
         bottom: 45%;
         left: 10%;
+    }
+}
+
+@media(max-width: 600px) {
+    .learn-more-btn {
+        bottom: 50%;
+        font-size: 20px;
+    }
+    @keyframes enlargeStartBtn {
+        0% {
+            width: 140px;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        50% {
+            width: 140px;
+            opacity: 1;
+            transform: translateY(0px);
+        }
+        70% {
+            width: 140px;
+        }
+        100% {
+            width: 200px;
+        }
+    }
+}
+
+@media(max-width: 500px) {
+    .learn-more-btn {
+        bottom: 5%;
+        background-color: rgb(15, 180, 172);
     }
 }

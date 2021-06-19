@@ -75,6 +75,7 @@
     }
 }
 
+
 /* RESPONSIVE DESIGN */
 
 @media (max-width: 1400px) {
@@ -87,10 +88,11 @@
 @media (max-width: 1100px) {
     .slogan-box {
         margin-left: 80px;
-    }
-    .slogan-box p {
-        font-size: 40px;
-        max-width: 400px;
+
+        p {
+            font-size: 40px;
+            max-width: 400px;
+        }
     }
 }
 
@@ -111,10 +113,11 @@
 @media (max-width: 800px) {
     .slogan-box {
         margin-left: 50px;
-    }
-    .slogan-box p {
-        font-size: 32px;
-        padding-left: 20px;
+
+        p {
+            font-size: 32px;
+            padding-left: 20px;
+        }
     }
 }
 
@@ -123,6 +126,19 @@
         padding-top: 40%;
     }
     .slogan-box p {
+        font-size: 28px;
         padding-left: 16px;
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 500px) {
+    .slogan-box {
+        margin-left: 24px;
+
+        p {
+            font-size: 24px;
+            max-width: 200px;
+        }
     }
 }

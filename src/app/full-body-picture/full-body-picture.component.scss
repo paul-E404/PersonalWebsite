@@ -144,4 +144,73 @@
     .body-picture {
         right: -10%;
     }
+    @keyframes topBarGrow {
+        0% {
+            width: 0;
+        }
+        3% {
+            width: 10%;
+        }
+        25% {
+            width: 63%;
+        }
+        50% {
+            width: 10%;
+        }
+        90% {
+            width: 63%;
+        }
+        100% {
+            width: 0%;
+        }
+    }
+    @keyframes middleBarGrow {
+        0% {
+            width: 0;
+        }
+        3% {
+            width: 75%;
+        }
+        30% {
+            width: 10%;
+        }
+        60% {
+            width: 75%;
+        }
+        100% {
+            width: 0%;
+        }
+    }
+    @keyframes bottomBarGrow {
+        0% {
+            width: 0;
+        }
+        3% {
+            width: 60%;
+        }
+        30% {
+            width: 95%;
+        }
+        60% {
+            width: 30%;
+        }
+        80% {
+            width: 90%;
+        }
+        100% {
+            width: 0%;
+        }
+    }
+}
+
+@media(max-width: 700px) {
+    .body-picture {
+        right: -15%;
+    }
+}
+
+@media(max-width: 600px) {
+    .body-picture {
+        height: 75%;
+    }
 }
