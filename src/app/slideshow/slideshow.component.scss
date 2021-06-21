@@ -105,7 +105,9 @@
 @media (max-width: 900px) {
     .slideshow-overlay {
         align-items: flex-start;
-        padding-top: 30%;
+    }
+    .slogan-box {
+        margin-top: 30%;
     }
 }
 
@@ -121,13 +123,14 @@
 }
 
 @media (max-width: 700px) {
-    .slideshow-overlay {
-        padding-top: 40%;
-    }
-    .slogan-box p {
-        font-size: 28px;
-        padding-left: 16px;
-        max-width: 250px;
+    .slogan-box {
+        margin-top: 40%;
+
+        p {
+            font-size: 28px;
+            padding-left: 16px;
+            max-width: 250px;
+        }
     }
 }
 
@@ -143,10 +146,11 @@
 }
 
 @media (max-width: 350px) {
-    .slideshow-overlay {
-        padding-top: 50%; 
-    }
-    .slogan-box p {
-        font-size: 20px;
+    .slogan-box {
+        margin-top: 50%;
+
+        p {
+            font-size: 20px;
+        }
     }
 }

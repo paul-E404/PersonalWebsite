@@ -9,7 +9,7 @@
     background-color: var(--bg-color-primary);
     z-index: 10;
 
-    div {
+    div:first-child {
         font-size: 24px;
         color: var(--color-primary);
         margin-left: 16px;
@@ -27,5 +27,18 @@
         &:hover {
             color: var(--color-secondary) !important;
         }
+    }
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media(max-width: 900px) {
+    .navbar div:first-child {
+        font-size: 20px;
+        width: 20%;
+    }
+    .navbar-links-container a {
+        font-size: 20px;
     }
 }

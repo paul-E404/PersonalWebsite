@@ -36,3 +36,47 @@
         text-align: center;
     }
 }
+
+/* RESPONSIVE DESIGN */
+
+@media (min-width: 700px) and (max-width: 1200px) {
+    .section-content {
+        flex-direction: column;
+    }
+    .about-me-box {
+        display: flex;
+        height: 300px;
+        width: 600px;
+        margin-bottom: 48px;
+
+        img {
+            height: 100%;
+            width: 50%;
+            transform: translateX(-100px) translateY(0);
+        }
+    }
+
+    .about-me-text-box {
+        height: 100%;
+        width: 50%;
+        left: unset;
+        bottom: unset;
+        right: 48px;
+        transform: translateX(100px) translateY(0);
+    }
+}
+
+/* @media (max-width: 700px) {
+    .about-me-box {
+        display: unset;
+    }
+    .about-me-text-box {
+        height: 100%;
+        width: 50%;
+        left: 0;
+        right: 0;
+        bottom: 48px;
+        transform: translateX(0) translateY(50px);
+    }
+}
+ */
