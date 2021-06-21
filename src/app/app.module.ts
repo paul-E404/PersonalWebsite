@@ -18,6 +18,7 @@ import { StartButtonComponent } from './start-button/start-button.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
+import { Globals } from './globals';
 
 @NgModule({
   declarations: [
@@ -40,9 +41,9 @@ import { FooterComponent } from './footer/footer.component';
     FontAwesomeModule,
     FormsModule,
     HttpClientModule,
-    AnimateOnScrollModule.forRoot()
+    AnimateOnScrollModule.forRoot(),
   ],
-  providers: [],
+  providers: [Globals],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

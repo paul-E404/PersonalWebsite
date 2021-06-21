@@ -7,13 +7,13 @@
     <div class="section-content">
         <div *ngFor="let aboutMeBox of aboutMeImageSources; let i = index" class="about-me-box">
             <!-- Animations window.innerWidth > 1200px -->
-            <img *ngIf="!middleScreenWidth" animateOnScroll animationName="fadeInSlideDown" src="assets/img/{{ aboutMeImageSources[i] }}" alt="about-me-image">
-            <div *ngIf="!middleScreenWidth" animateOnScroll animationName="fadeInSlideUp" class="about-me-text-box">
+            <img *ngIf="!globals.middleScreenWidthReached" animateOnScroll animationName="fadeInSlideDown" src="assets/img/{{ aboutMeImageSources[i] }}" alt="about-me-image">
+            <div *ngIf="!globals.middleScreenWidthReached" animateOnScroll animationName="fadeInSlideUp" class="about-me-text-box">
                 <div>{{ aboutMeTexts[i] }}</div>
             </div>
             <!-- Animations window.innerWidth <= 1200px -->
-            <img *ngIf="middleScreenWidth" animateOnScroll animationName="fadeInSlideRight" src="assets/img/{{ aboutMeImageSources[i] }}" alt="about-me-image">
-            <div *ngIf="middleScreenWidth" animateOnScroll animationName="fadeInSlideLeft" class="about-me-text-box">
+            <img *ngIf="globals.middleScreenWidthReached" animateOnScroll animationName="fadeInSlideRight" src="assets/img/{{ aboutMeImageSources[i] }}" alt="about-me-image">
+            <div *ngIf="globals.middleScreenWidthReached" animateOnScroll animationName="fadeInSlideLeft" class="about-me-text-box">
                 <div>{{ aboutMeTexts[i] }}</div>
             </div>
         </div>

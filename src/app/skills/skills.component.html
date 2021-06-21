@@ -14,7 +14,8 @@
                             <td>
                                 <div class="skill-bar-max">
                                     <div [ngStyle]="setBarWidth(i)" class="skill-bar-value">
-                                        <div animateOnScroll animationName="fillSkillBar" class="growing-skill-bar"></div>
+                                        <div animateOnScroll animationName="fillSkillBar" class="growing-skill-bar">
+                                        </div>
                                     </div>
                                 </div>
                             </td>
@@ -24,18 +25,31 @@
             </div>
         </div>
 
-        <div animateOnScroll animationName="fadeInSlideLeft" class="triangle">
+        <!-- Animations window.innerWidth > 1200px -->
+        <div *ngIf="!globals.middleScreenWidthReached" animateOnScroll animationName="fadeInSlideLeft" class="triangle">
             <div class="triangle-text">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore voluptates sed nostrum harum ipsam.
-                Commodi quam veniam voluptatibus, voluptatum exercitationem repudiandae rerum modi aperiam odit corrupti
-                ipsa quod, qui iure?
+                Started as a totally coding-newbie, I became part of the Developer Academy and its online
+                coaching in the middle of January 2021. In 4 months of full time and from then in part-time, I got the
+                chance to learn to code and — in particular — learn to love coding!
+            </div>
+            <div class="triangle-image-box">
+                <img src="assets/img/skills_image.jpg" alt="water">
             </div>
         </div>
 
-        <div animateOnScroll animationName="fadeInSlideLeft" class="skills-image-box">
-            <img src="assets/img/skills_image.jpg" alt="water">
+        <!-- Animations window.innerWidth <= 1200px -->
+        <div *ngIf="globals.middleScreenWidthReached" animateOnScroll animationName="fadeInSlideDown" class="triangle">
+            <div class="triangle-text">
+                Started as a totally coding-newbie, I became part of the Developer Academy and its online
+                coaching in the middle of January 2021. In 4 months of full time and from then in part-time, I got the
+                chance to learn to code and — in particular — learn to love coding!
+            </div>
+            <div class="triangle-image-box">
+                <img src="assets/img/skills_image.jpg" alt="water">
+            </div>
         </div>
-        
+
+
     </div>
 </section>
 

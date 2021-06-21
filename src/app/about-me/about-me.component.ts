@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Globals } from '../globals';
 
 @Component({
   selector: 'app-about-me',
@@ -13,13 +14,11 @@ export class AboutMeComponent implements OnInit {
     'Responsable for staff and all catering areas (café, restaurant, cocktail bar) as a shift manager in a cinema in Nuremberg...',
     '...the corona pandemic made me break new ground and discover my passion for programming at the Developer Academy.'];
 
-  middleScreenWidth: boolean = false;
-
-  constructor() { }
+  constructor(public globals: Globals) { }
 
   ngOnInit(): void {
     if (window.innerWidth <= 1200) {
-      this.middleScreenWidth = true;
+      this.globals.middleScreenWidthReached = true;
     }
   }
 

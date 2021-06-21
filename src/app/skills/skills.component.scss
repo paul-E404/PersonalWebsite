@@ -3,12 +3,10 @@ h2 {
 }
 
 .skills-box {
-    /* height: 700px; */
     width: 500px;
     background-image: url(../../assets/img/skills_image.jpg);
     border-radius: 12px;
     margin-right: 40px;
-    /* margin-top: -20px; */
     margin-left: -20px;
     border: 3px solid var(--bg-color-primary);
     opacity: 0;
@@ -72,19 +70,20 @@ h2 {
 .triangle-text {
     position: absolute;
     left: 160px;
-    bottom: -110px;
-    width: 260px;
+    bottom: -140px;
+    width: 280px;
     text-align: right;
 }
 
-.skills-image-box {
+.triangle-image-box {
+    position: absolute;
+    top: -300px;
+    left: 450px;
     height: 600px;
     width: 50px;
     overflow: hidden;
-    border-top-right-radius: 12px;
-    border-bottom-right-radius: 12px;
-    opacity: 0;
-    transform: translateX(100px);
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
 
     img {
         width: 100%;
@@ -94,13 +93,11 @@ h2 {
     }
 }
 
-
 /* ANIMATIONS AND KEYFRAMES */
 
 .fillSkillBar {
     animation: fillSkillBar 2s ease-in-out forwards;
 }
-
 
 @keyframes fillSkillBar {
     0% {
@@ -111,5 +108,73 @@ h2 {
     }
     100% {
         width: 100%;
+    }
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1200px) {
+    .section-content {
+        flex-direction: column;
+    }
+    .skills-box {
+        order: 2;
+    }
+    .triangle {
+        order: 1;
+        border-width: 450px 300px 0 300px;
+        border-color: var(--bg-color-primary) transparent transparent transparent;
+        transform: translateX(0) translateY(-50px);
+    }
+    .triangle-image-box {
+        width: 600px;
+        height: 20px;
+        border-bottom-right-radius: unset;
+        border-top-left-radius: 6px;
+        top: -470px;
+        left: -300px;
+    }
+    .triangle-text {
+        left: -150px;
+        bottom: 210px;
+        width: 300px;
+        text-align: center;
+    }
+}
+
+@media(max-width: 700px) {
+    .triangle {
+        border-width: 400px 250px 0 250px;
+        margin-bottom: 16px;
+    }
+    .triangle-image-box {
+        width: 500px;
+        top: -420px;
+        left: -250px;
+    }
+    .triangle-text {
+        left: -135px;
+        bottom: 190px;
+        width: 270px;
+    }
+    .skills-box {
+        width: 400px;
+    }
+}
+
+@media(max-width: 600px) {
+    .triangle {
+        border-width: 300px 200px 0 200px;
+    }
+    .triangle-image-box {
+        width: 400px;
+        top: -320px;
+        left: -200px;
+    }
+    .triangle-text {
+        bottom: 80px;
+    }
+    .skills-box {
+        width: 350px;
     }
 }
