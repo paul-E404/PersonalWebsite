@@ -21,9 +21,6 @@ export class AboutMeComponent implements OnInit {
     if (window.innerWidth <= 1200) {
       this.middleScreenWidth = true;
     }
-    setInterval(() => {
-      console.log("this.middleScreenWidth", this.middleScreenWidth);
-    }, 1000);
   }
 
 }
