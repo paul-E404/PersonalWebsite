@@ -75,7 +75,6 @@
     }
 }
 
-
 /* RESPONSIVE DESIGN */
 
 @media (max-width: 1400px) {
@@ -140,5 +139,14 @@
             font-size: 24px;
             max-width: 200px;
         }
+    }
+}
+
+@media (max-width: 350px) {
+    .slideshow-overlay {
+        padding-top: 50%; 
+    }
+    .slogan-box p {
+        font-size: 20px;
     }
 }

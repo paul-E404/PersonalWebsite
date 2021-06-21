@@ -53,9 +53,16 @@ header {
         font-size: 28px;
 
         span {
-            max-width: 60%;
+            max-width: 53%;
             text-align: right;
             margin-top: 24px;
         }
+    }
+}
+
+@media (max-width: 350px) {
+    header span {
+        max-width: 65%;
+        margin-top: 24px;
     }
 }
