@@ -4,6 +4,10 @@
     justify-content: space-between;
     align-items: flex-end;
     border-bottom: 4px solid var(--color-secondary);
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
     position: sticky;
     top: 0;
     background-color: var(--bg-color-primary);

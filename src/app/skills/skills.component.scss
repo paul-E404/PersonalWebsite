@@ -1,3 +1,5 @@
+$skills-section-padding: 32px;
+
 h2 {
     margin-bottom: 32px !important;
 }
@@ -22,7 +24,7 @@ h2 {
 
         table {
             height: 100%;
-            padding: 32px;
+            padding: $skills-section-padding;
 
             tr {
                 height: 52px;
@@ -56,32 +58,34 @@ h2 {
     z-index: 10;
 }
 
-.triangle {
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 300px 450px 300px 0;
-    border-color: transparent var(--bg-color-primary) transparent transparent;
-    position: relative;
+.triangle-container {
+    height: 600px;
+    width: 530px;
+    display: flex;
     opacity: 0;
     transform: translateX(100px);
 }
 
+.triangle {
+    border-style: solid;
+    border-width: 300px 150px 300px 0;
+    border-color: transparent var(--bg-color-primary) transparent transparent;
+}
+
 .triangle-text {
-    position: absolute;
-    left: 160px;
-    bottom: -140px;
-    width: 280px;
-    text-align: right;
+    width: 320px;
+    background-color: var(--bg-color-primary);
+    padding: $skills-section-padding;
+    text-align: justify;
+    overflow: auto;
 }
 
 .triangle-image-box {
-    position: absolute;
-    top: -300px;
-    left: 450px;
-    height: 600px;
-    width: 50px;
+    width: 30px;
     overflow: hidden;
+    border-top: 3px solid var(--bg-color-primary);
+    border-right: 3px solid var(--bg-color-primary);
+    border-bottom: 3px solid var(--bg-color-primary);
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
 
@@ -103,7 +107,7 @@ h2 {
     0% {
         width: 0;
     }
-    25% {
+    40% {
         width: 0;
     }
     100% {
@@ -119,62 +123,136 @@ h2 {
     }
     .skills-box {
         order: 2;
+        margin-right: unset;
     }
-    .triangle {
+    .triangle-container {
         order: 1;
-        border-width: 450px 300px 0 300px;
-        border-color: var(--bg-color-primary) transparent transparent transparent;
+        height: unset;
+        width: 550px;
+        flex-direction: column-reverse;
         transform: translateX(0) translateY(-50px);
-    }
-    .triangle-image-box {
-        width: 600px;
-        height: 20px;
-        border-bottom-right-radius: unset;
-        border-top-left-radius: 6px;
-        top: -470px;
-        left: -300px;
-    }
-    .triangle-text {
-        left: -150px;
-        bottom: 210px;
-        width: 300px;
-        text-align: center;
-    }
-}
-
-@media(max-width: 700px) {
-    .triangle {
-        border-width: 400px 250px 0 250px;
         margin-bottom: 16px;
     }
-    .triangle-image-box {
-        width: 500px;
-        top: -420px;
-        left: -250px;
+    .triangle {
+        border-width: 100px 275px 0 275px;
+        border-color: var(--bg-color-primary) transparent transparent transparent;
     }
     .triangle-text {
-        left: -135px;
-        bottom: 190px;
-        width: 270px;
+        width: unset;
     }
-    .skills-box {
-        width: 400px;
+    .triangle-image-box {
+        width: calc(100% - 6px); //Full width of parent element minus border
+        height: 20px;
+        border-bottom: unset;
+        border-left: 3px solid var(--bg-color-primary);
+        border-bottom-right-radius: unset;
+        border-top-left-radius: 6px;
     }
 }
 
-@media(max-width: 600px) {
-    .triangle {
-        border-width: 300px 200px 0 200px;
-    }
-    .triangle-image-box {
+@media (max-width: 700px) {
+    .skills-box {
         width: 400px;
-        top: -320px;
-        left: -200px;
+    }
+    .triangle-container {
+        width: 450px;
+    }
+    .triangle {
+        border-width: 60px 225px 0 225px;
+    }
+}
+
+@media (max-width: 600px) {
+    .skills-box {
+        width: 380px;
+    }
+    .triangle-container {
+        width: 400px;
+    }
+    .triangle {
+        border-width: 60px 200px 0 200px;
     }
     .triangle-text {
-        bottom: 80px;
+        padding: 28px;
     }
+    .skills-box-content table {
+        padding: 28px !important;
+
+        tr {
+            height: 40px !important;
+        }
+    }
+}
+
+@media (max-width: 500px) {
     .skills-box {
         width: 350px;
+    }
+    .triangle-container {
+        width: 350px;
+    }
+    .triangle {
+        border-width: 60px 175px 0 175px;
+    }
+    .triangle-text {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 400px) {
+    .skills-box {
+        width: 300px;
+    }
+    .skills-box-content {
+        margin: 12px !important;
+
+        table {
+            padding: 20px !important;
+        }
+    }
+    .triangle-container {
+        width: 300px;
+    }
+    .triangle {
+        border-width: 40px 150px 0 150px;
+    }
+    .triangle-text {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 350px) {
+    .skills-box {
+        width: 250px;
+    }
+    .skills-box-content {
+        font-size: 16px !important;
+    }
+    .triangle-container {
+        width: 250px;
+    }
+    .triangle {
+        border-width: 40px 125px 0 125px;
+    }
+    .triangle-text {
+        font-size: 16px !important;
+    }
+}
+
+@media (max-width: 300px) {
+    .skills-box {
+        width: 220px;
+    }
+    .skills-box-content table {
+        padding: 12px !important;
+    }
+    .triangle-container {
+        width: 220px;
+    }
+    .triangle {
+        border-width: 40px 110px 0 110px;
+    }
+    .triangle-text {
+        padding: 12px;
     }
 }
