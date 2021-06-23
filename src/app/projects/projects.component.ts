@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Globals } from '../globals';
 
 @Component({
   selector: 'app-projects',
@@ -42,9 +43,10 @@ export class ProjectsComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(public globals: Globals) { }
 
   ngOnInit(): void {
+    this.globals.checkForMiddleScreenWidth();
   }
 
 }

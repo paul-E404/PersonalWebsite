@@ -17,9 +17,7 @@ export class AboutMeComponent implements OnInit {
   constructor(public globals: Globals) { }
 
   ngOnInit(): void {
-    if (window.innerWidth <= 1200) {
-      this.globals.middleScreenWidthReached = true;
-    }
+    this.globals.checkForMiddleScreenWidth();
   }
 
 }
