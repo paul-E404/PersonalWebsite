@@ -140,7 +140,6 @@ h3 {
     margin: 20px;
 }
 
-
 /* ANIMATIONS AND KEYFRAMES */
 
 .contactFormZoomIn {
@@ -155,7 +154,7 @@ h3 {
     20% {
         opacity: 1;
     }
-    60%{
+    60% {
         transform: scale(1.1);
     }
     70% {
@@ -164,5 +163,60 @@ h3 {
     100% {
         transform: scale(1);
         opacity: 1;
+    }
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1600px) {
+    .contact-bg-image {
+        background-position-x: -400px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .contact-bg-image {
+        background-position-x: -550px;
+    }
+}
+
+@media (max-width: 700px) {
+    .contact-bg-layer {
+        display: none;
+    }
+    .contactFormZoomIn {
+        animation: contactFormZoomIn 0.8s ease-in-out forwards;
+    }
+}
+
+@media (max-width: 500px) {
+    .section-content {
+        width: 80%;
+        text-align: center;
+    }
+    .contact-form-container {
+        width: 100%;
+        border-top-right-radius: 12px;
+        border-bottom-left-radius: 12px;
+    }
+    input {
+        width: unset !important;
+    }
+}
+
+@media (max-width: 400px) {
+    input, textarea {
+        margin-bottom: 8px !important;
+    }
+}
+
+@media (max-width: 300px) {
+    .contact-form-container {
+        height: unset !important;
+    }
+    input, textarea, button {
+        margin-top: 12px !important;
+        margin-left: 12px !important;
+        margin-right: 12px !important;
     }
 }
