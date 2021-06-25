@@ -1,5 +1,6 @@
 .navbar {
     height: var(--navbar-height);
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -8,7 +9,7 @@
     position: -moz-sticky;
     position: -ms-sticky;
     position: -o-sticky;
-    position: sticky;
+    position: sticky;       //Position sticky doesn't work with overflow-x: hidden 
     top: 0;
     background-color: var(--bg-color-primary);
     z-index: 10;
@@ -18,7 +19,6 @@
         font-size: 24px;
         color: var(--color-primary);
         margin-left: 16px;
-        margin-bottom: 16px;
     }
 }
 
