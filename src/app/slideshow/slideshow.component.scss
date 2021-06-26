@@ -152,3 +152,16 @@
         }
     }
 }
+
+/* iPad Pro */
+@media (min-width: 1000px) and (max-width: 1024px) and (min-height: 1024px) {
+    .slogan-box {
+        margin-top: -50%;
+        margin-left: 120px;
+
+        p {
+            font-size: 56px;
+            max-width: 500px;
+        }
+    }
+}

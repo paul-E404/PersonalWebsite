@@ -88,3 +88,10 @@
         display: unset !important;
     }
 }
+
+/* iPad Pro */
+@media (min-width: 1000px) and (max-width: 1024px) and (min-height: 1024px) {
+    .navbar div:first-child, .navbar-links-container a {
+        font-size: 28px;
+    }
+}

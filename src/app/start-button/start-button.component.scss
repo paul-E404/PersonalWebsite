@@ -137,3 +137,31 @@
         background-color: rgb(15, 180, 172);
     }
 }
+
+/* iPad Pro */
+@media (min-width: 1000px) and (max-width: 1024px) and (min-height: 1024px) {
+    .learn-more-btn {
+        height: 80px;
+        left: 16%;
+        bottom: 35%;
+        font-size: 32px;
+    }
+    @keyframes enlargeStartBtn {
+        0% {
+            width: 215px;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        50% {
+            width: 215px;
+            opacity: 1;
+            transform: translateY(0px);
+        }
+        70% {
+            width: 215px;
+        }
+        100% {
+            width: 290px;
+        }
+    }
+}

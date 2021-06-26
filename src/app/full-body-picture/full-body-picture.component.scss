@@ -289,3 +289,82 @@
         right: -5%;
     }
 }
+
+/* iPad Pro */
+@media (min-width: 1000px) and (max-width: 1024px) and (min-height: 1024px) {
+    .body-picture {
+        height: 80%;
+        right: -10%;
+    }
+    .overlay-bar-top {
+        bottom: 320px;
+        height: 60px;
+    }
+    .overlay-bar-middle {
+        bottom: 200px;
+        height: 80px;
+    }
+    .overlay-bar-bottom {
+        bottom: 70px;
+        height: 90px;
+    }
+    @keyframes topBarGrow {
+        0% {
+            width: 0;
+        }
+        3% {
+            width: 10%;
+        }
+        25% {
+            width: 63%;
+        }
+        50% {
+            width: 10%;
+        }
+        90% {
+            width: 63%;
+        }
+        100% {
+            width: 0%;
+        }
+    }
+    @keyframes middleBarGrow {
+        0% {
+            width: 0;
+        }
+        3% {
+            width: 75%;
+        }
+        30% {
+            width: 10%;
+        }
+        60% {
+            width: 75%;
+        }
+        100% {
+            width: 0%;
+        }
+    }
+    @keyframes bottomBarGrow {
+        0% {
+            width: 0;
+        }
+        3% {
+            width: 60%;
+        }
+        30% {
+            width: 95%;
+        }
+        60% {
+            width: 30%;
+        }
+        80% {
+            width: 90%;
+        }
+        100% {
+            width: 0%;
+        }
+    }
+    
+}
+
