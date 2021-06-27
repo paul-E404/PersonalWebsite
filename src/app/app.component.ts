@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Globals } from './globals';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,12 @@ export class AppComponent {
   title = 'personal-website';
 
   currentRoute = '';
- 
-  constructor(public router: Router) { }
+
+  constructor(public router: Router, public globals: Globals) { }
+
+  openLegalNotice() {
+    document.body.style.overflow = "hidden";
+    this.globals.legalNoticeShown = true;
+  }
 
 }

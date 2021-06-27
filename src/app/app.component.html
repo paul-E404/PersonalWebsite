@@ -12,7 +12,8 @@
     <app-skills></app-skills>
     <app-projects></app-projects>
     <app-contact></app-contact>
-    <app-footer></app-footer>
+    <app-footer (onClickLegalNotice)="openLegalNotice()"></app-footer>
+    <app-legal-notice *ngIf="globals.legalNoticeShown"></app-legal-notice>
 </div>
 
 

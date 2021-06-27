@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
@@ -11,9 +11,15 @@ export class FooterComponent implements OnInit {
   faLinkedin = faLinkedin;
   faGithub = faGithub;
 
+  @Output() onClickLegalNotice = new EventEmitter;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onOpenLegalNotice() {
+    this.onClickLegalNotice.emit();
   }
 
 }

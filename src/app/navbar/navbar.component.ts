@@ -1,6 +1,7 @@
 import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { faElementor } from '@fortawesome/free-brands-svg-icons';
+import { Globals } from '../globals';
 
 @Component({
   selector: 'app-navbar',
@@ -12,7 +13,7 @@ export class NavbarComponent implements OnInit {
   faElementor = faElementor;
   navbarFolded: boolean = true;
 
-  constructor(private viewportScroller: ViewportScroller) { }
+  constructor(private viewportScroller: ViewportScroller, public globals: Globals) { }
 
   ngOnInit(): void {
   }
@@ -20,6 +21,8 @@ export class NavbarComponent implements OnInit {
   public onClick(elementId: string): void {
     this.viewportScroller.scrollToAnchor(elementId);
     this.navbarFolded = true;
+    document.body.style.overflow = "auto";
+    this.globals.legalNoticeShown = false;
   }
 
   toggleNavbar() {
