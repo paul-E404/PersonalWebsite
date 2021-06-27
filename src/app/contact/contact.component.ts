@@ -9,6 +9,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ContactComponent implements OnInit {
 
+  email: string = 'paul_engerling@web.de';
   singleMessage: contactMessage;
   submitted: boolean = false;
   endpoint: string = 'http://paul-engerling.developerakademie.com/Modul12/Personal-Website/send_mail.php';

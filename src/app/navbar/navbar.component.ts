@@ -23,6 +23,7 @@ export class NavbarComponent implements OnInit {
     this.navbarFolded = true;
     document.body.style.overflow = "auto";
     this.globals.legalNoticeShown = false;
+    this.globals.dataProtectionShown = false;
   }
 
   toggleNavbar() {

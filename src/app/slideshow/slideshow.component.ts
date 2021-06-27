@@ -17,7 +17,6 @@ export class SlideshowComponent implements OnInit {
   ];
 
   currentImageIndex = 0;
-  /*  showImage = true; */
   showImage0 = true;
   showImage1 = true;
   showImage2 = false;

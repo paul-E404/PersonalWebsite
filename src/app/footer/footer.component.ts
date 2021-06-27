@@ -12,6 +12,7 @@ export class FooterComponent implements OnInit {
   faGithub = faGithub;
 
   @Output() onClickLegalNotice = new EventEmitter;
+  @Output() onClickDataProtection = new EventEmitter;
 
   constructor() { }
 
@@ -20,6 +21,10 @@ export class FooterComponent implements OnInit {
 
   onOpenLegalNotice() {
     this.onClickLegalNotice.emit();
+  }
+
+  onOpenDataProtection() {
+    this.onClickDataProtection.emit();
   }
 
 }

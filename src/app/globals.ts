@@ -5,6 +5,7 @@ export class Globals {
 
     middleScreenWidthReached: boolean = false;
     legalNoticeShown: boolean = false;
+    dataProtectionShown: boolean = false;
 
     checkForMiddleScreenWidth() {
         if (window.innerWidth <= 1200) {
@@ -15,6 +16,7 @@ export class Globals {
     closeDialog() {
         document.body.style.overflow = "auto";
         this.legalNoticeShown = false;
+        this.dataProtectionShown = false;
     }
 
 }

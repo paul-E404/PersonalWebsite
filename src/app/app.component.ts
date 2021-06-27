@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { Globals } from './globals';
 
 @Component({
@@ -12,11 +11,16 @@ export class AppComponent {
 
   currentRoute = '';
 
-  constructor(public router: Router, public globals: Globals) { }
+  constructor(public globals: Globals) { }
 
   openLegalNotice() {
     document.body.style.overflow = "hidden";
     this.globals.legalNoticeShown = true;
+  }
+
+  openDataProtection() {
+    document.body.style.overflow = "hidden";
+    this.globals.dataProtectionShown = true;
   }
 
 }

@@ -1,6 +1,6 @@
 <div class="wrapper">
-    <app-header [darkMode]="router.url !== '/'"></app-header>
-    <app-full-body-picture *ngIf="router.url == '/'"></app-full-body-picture>
+    <app-header></app-header>
+    <app-full-body-picture></app-full-body-picture>
     <app-start-button></app-start-button>
     <app-slideshow></app-slideshow>
 </div>
@@ -12,11 +12,7 @@
     <app-skills></app-skills>
     <app-projects></app-projects>
     <app-contact></app-contact>
-    <app-footer (onClickLegalNotice)="openLegalNotice()"></app-footer>
+    <app-footer (onClickLegalNotice)="openLegalNotice()" (onClickDataProtection)="openDataProtection()"></app-footer>
     <app-legal-notice *ngIf="globals.legalNoticeShown"></app-legal-notice>
+    <app-data-protection *ngIf="globals.dataProtectionShown"></app-data-protection>
 </div>
-
-
-<!-- <div [class.container]="router.url !== '/'">
-    <router-outlet></router-outlet>
-</div> -->

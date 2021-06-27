@@ -19,6 +19,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { Globals } from './globals';
+import { DataProtectionComponent } from './data-protection/data-protection.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { Globals } from './globals';
     StartButtonComponent,
     ProjectsComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    DataProtectionComponent
   ],
   imports: [
     BrowserModule,
