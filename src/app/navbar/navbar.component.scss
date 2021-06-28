@@ -9,7 +9,7 @@
     position: -moz-sticky;
     position: -ms-sticky;
     position: -o-sticky;
-    position: sticky;       //Position sticky doesn't work with overflow-x: hidden 
+    position: sticky; //Position sticky doesn't work together with overflow-x: hidden
     top: 0;
     background-color: var(--bg-color-primary);
     z-index: 10;
@@ -91,7 +91,8 @@
 
 /* iPad Pro */
 @media (min-width: 1000px) and (max-width: 1024px) and (min-height: 1024px) {
-    .navbar div:first-child, .navbar-links-container a {
+    .navbar div:first-child,
+    .navbar-links-container a {
         font-size: 28px;
     }
 }

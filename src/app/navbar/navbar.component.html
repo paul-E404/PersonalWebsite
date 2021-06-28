@@ -1,11 +1,11 @@
 <div class="navbar" [class.navbar-enlarged]="!navbarFolded">
     <div>P@UL ENGERLING</div>
     <div class="navbar-links-container">
-        <a (click)="onClick('home')">Home</a>
-        <a (click)="onClick('about-me')">About Me</a>
-        <a (click)="onClick('skills')">IT Skills</a>
-        <a (click)="onClick('projects')">Projects</a>
-        <a (click)="onClick('contact')">Contact</a>
+        <a (click)="jumpTo('home')">Home</a>
+        <a (click)="jumpTo('about-me')">About Me</a>
+        <a (click)="jumpTo('skills')">IT Skills</a>
+        <a (click)="jumpTo('projects')">Projects</a>
+        <a (click)="jumpTo('contact')">Contact</a>
     </div>
     <fa-icon (click)="toggleNavbar()" [icon]="faElementor" class="navbar-toggle-btn"></fa-icon>
 </div>

@@ -17,7 +17,10 @@ export class SkillsComponent implements OnInit {
     this.globals.checkForMiddleScreenWidth();
   }
 
-
+  /**
+   * Sets width of bar depending on percentage rate.
+   * @param  {number} i Index of skillsNames array.
+   */
   setBarWidth(i: number) {
     let barWidth = {
       'width': this.skillsPercentage[i] + '%'

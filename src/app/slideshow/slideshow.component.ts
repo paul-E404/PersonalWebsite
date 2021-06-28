@@ -28,7 +28,9 @@ export class SlideshowComponent implements OnInit {
     this.updateImage();
   }
 
-
+  /**
+   * Updates the current (preloaded) picture for slideshow animation.
+   */
   updateImage() {
     setInterval(() => {
       this.currentImageIndex++;
@@ -59,16 +61,5 @@ export class SlideshowComponent implements OnInit {
       }
     }, 10000);
   }
-  
-/*   updateImage() {
-    setInterval(() => {
-      this.currentImageIndex++;
-      this.currentImageIndex = this.currentImageIndex % this.images.length;
-      this.showImage = false;
-      setInterval(() => {
-        this.showImage = true;
-      }, 10)
-    }, 10000);
-  } */
 
 }

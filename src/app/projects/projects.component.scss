@@ -26,7 +26,6 @@ $project-box-radius: 50px;
 .circle-project-title {
     height: 100px;
     width: 100px;
-    /* border: 3px solid #ffd000; */
     border: 3px solid rgb(132, 0, 255);
     border-radius: 50%;
     background-color: rgba(10, 22, 65, 0.8);
@@ -51,8 +50,6 @@ $project-box-radius: 50px;
 
 .project-text-box {
     height: calc(#{$project-box-height} / 2);
-    /* border: 3px solid rgb(255, 208, 0); */
-    /* border: 3px solid #eeff00; */
     border: 3px solid #8400ff;
     background-color: var(--bg-color-primary);
     display: flex;
@@ -166,14 +163,14 @@ $project-box-radius: 50px;
     }
 }
 
-@media(max-width: 400px) {
+@media (max-width: 400px) {
     .doc-btn {
         height: 60px !important;
         width: 100px !important;
     }
 }
 
-@media(max-width: 350px) {
+@media (max-width: 350px) {
     .project-text-box {
         padding: 12px;
     }
@@ -183,7 +180,7 @@ $project-box-radius: 50px;
     }
 }
 
-@media(max-width: 300px) {
+@media (max-width: 300px) {
     .project-description {
         font-size: 16px !important;
     }
@@ -194,4 +191,3 @@ $project-box-radius: 50px;
         font-size: 14px !important;
     }
 }
-

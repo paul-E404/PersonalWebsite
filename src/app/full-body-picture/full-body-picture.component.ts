@@ -17,13 +17,19 @@ export class FullBodyPictureComponent implements OnInit {
     this.showOverlayBars();
   }
 
-  showFullBodyPicture(){
+  /**
+   * Displays preloaded full body picture.
+   */
+  showFullBodyPicture() {
     setTimeout(() => {
       this.fullBodyPictureShown = true;
     }, 2000);
   }
 
-  showOverlayBars(){
+  /**
+   * Starts animation of overlay bars.
+   */
+  showOverlayBars() {
     setTimeout(() => {
       this.overlayBarsShown = true;
     }, 3000);

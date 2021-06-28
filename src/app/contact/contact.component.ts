@@ -12,6 +12,8 @@ export class ContactComponent implements OnInit {
   email: string = 'paul_engerling@web.de';
   singleMessage: contactMessage;
   submitted: boolean = false;
+  errorMessageShown: boolean = false;
+  notSubmitted: boolean = false;
   endpoint: string = 'http://paul-engerling.developerakademie.com/Modul12/Personal-Website/send_mail.php';
 
   constructor(private http: HttpClient) { }
@@ -20,21 +22,28 @@ export class ContactComponent implements OnInit {
     this.singleMessage = new contactMessage('', '', '', '');
   }
 
-  newContactMessage() {
-    console.log("singleMessage", this.singleMessage);
-  }
-
+  /**
+   * Submits the form with all its data to the php document on the webserver.
+   * @param  {any} myForm The filled out form to be sent.
+   */
   onSubmit(myForm: any) {
-    this.submitted = true;
     this.http.post(this.endpoint, myForm.value)
       .subscribe(
         (response) => {
-          console.log("Der Typ des Übergabeparameters contactForm in der Funktion onSubmit:", typeof(myForm), "Der Parameter selbst: ", myForm);
-          console.log("Die Response nach submit lautet:", response);
+          this.submitted = true;
+          console.log("Typ des Übergabeparameters myForm in der Funktion onSubmit:", typeof (myForm), "Parameter myForm selbst: ", myForm);
+          console.log("Response nach onSubmit lautet:", response);
         },
         (error) => {
+          this.errorMessageShown = true;
           console.log("Fehlermeldung von fehlgeschlagenem onSubmit()", error);
         });
   }
 
+  /**
+   * Shows written but not sent message.
+   */
+  backToMessage() {
+    this.errorMessageShown = false;
+  }
 }

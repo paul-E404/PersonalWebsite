@@ -5,6 +5,6 @@ export class contactMessage {
         public email: string,
         public subject: string,
         public message: string
-    ) {}
+    ) { }
 
 }

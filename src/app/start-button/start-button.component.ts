@@ -18,13 +18,21 @@ export class StartButtonComponent implements OnInit {
     this.showStartButton();
   }
 
+  /**
+   * Shows start button and its animation.
+   */
   showStartButton() {
     setTimeout(() => {
       this.startButtonShown = true;
     }, 4000)
   }
 
-  public onClick(elementId: string): void {
+  /**
+   * Scrolls to the particular section.
+   * @param  {string} elementId Id of the section you want to go to.
+   * @returns void
+   */
+  public jumpTo(elementId: string): void {
     this.viewportScroller.scrollToAnchor(elementId);
   }
 

@@ -7,23 +7,29 @@
     <div class="section-content">
         <div *ngFor="let project of projects; let i = index" class="project-box">
             <a href="{{ projects[i].href }}" target="_blank">
+
                 <!-- Animations window.innerWidth > 1200px -->
-                <div *ngIf="!globals.middleScreenWidthReached" animateOnScroll animationName="fadeInSlideDown" class="project-image-box">
+                <div *ngIf="!globals.middleScreenWidthReached" animateOnScroll animationName="fadeInSlideDown"
+                    class="project-image-box">
                     <img src="assets/img/{{ projects[i].imageSrc }}">
                     <div animateOnScroll animationName="rotateAndSlideRight" class="circle-project-title">
                         <span>{{ projects[i].title }}</span>
                     </div>
                 </div>
+
                 <!-- Animations window.innerWidth <= 1200px -->
-                <div *ngIf="globals.middleScreenWidthReached" animateOnScroll animationName="fadeInSlideLeft" class="project-image-box">
+                <div *ngIf="globals.middleScreenWidthReached" animateOnScroll animationName="fadeInSlideLeft"
+                    class="project-image-box">
                     <img src="assets/img/{{ projects[i].imageSrc }}">
                     <div animateOnScroll animationName="rotateAndSlideRight" class="circle-project-title">
                         <span>{{ projects[i].title }}</span>
                     </div>
                 </div>
             </a>
+
             <!-- Animations window.innerWidth > 1200px -->
-            <div *ngIf="!globals.middleScreenWidthReached" animateOnScroll animationName="fadeInSlideUp" class="project-text-box">
+            <div *ngIf="!globals.middleScreenWidthReached" animateOnScroll animationName="fadeInSlideUp"
+                class="project-text-box">
                 <div class="project-description">{{ projects[i].description }}</div>
                 <div class="project-techniques">
                     <span>Used techniques:</span><br>&middot;
@@ -35,8 +41,10 @@
                     <button class="doc-btn">{{ projects[i].documentation }}</button>
                 </div>
             </div>
-             <!-- Animations window.innerWidth <= 1200px -->
-             <div *ngIf="globals.middleScreenWidthReached" animateOnScroll animationName="fadeInSlideRight" class="project-text-box">
+
+            <!-- Animations window.innerWidth <= 1200px -->
+            <div *ngIf="globals.middleScreenWidthReached" animateOnScroll animationName="fadeInSlideRight"
+                class="project-text-box">
                 <div class="project-description">{{ projects[i].description }}</div>
                 <div class="project-techniques">
                     <span>Used techniques:</span><br>&middot;
@@ -48,6 +56,7 @@
                     <button class="doc-btn">{{ projects[i].documentation }}</button>
                 </div>
             </div>
+            
         </div>
     </div>
 

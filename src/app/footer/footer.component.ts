@@ -19,10 +19,16 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /**
+   * Fires the event for legal notice to be shown.
+   */
   onOpenLegalNotice() {
     this.onClickLegalNotice.emit();
   }
 
+  /**
+   * Fires the event for data protection to be shown.
+   */
   onOpenDataProtection() {
     this.onClickDataProtection.emit();
   }

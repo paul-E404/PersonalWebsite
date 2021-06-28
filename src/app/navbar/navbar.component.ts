@@ -18,19 +18,25 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public onClick(elementId: string): void {
+  /**
+   * Scrolls to the particular section.
+   * @param  {string} elementId Id of the section you want to go to.
+   * @returns void
+   */
+  public jumpTo(elementId: string): void {
     this.viewportScroller.scrollToAnchor(elementId);
     this.navbarFolded = true;
-    document.body.style.overflow = "auto";
-    this.globals.legalNoticeShown = false;
-    this.globals.dataProtectionShown = false;
+    this.globals.closeDialog();
   }
 
+  /**
+   * Folds and unfolds navbar on click.
+   */
   toggleNavbar() {
-    if(this.navbarFolded) {
+    if (this.navbarFolded) {
       this.navbarFolded = false;
     }
-    else if(!this.navbarFolded) {
+    else if (!this.navbarFolded) {
       this.navbarFolded = true;
     }
   }

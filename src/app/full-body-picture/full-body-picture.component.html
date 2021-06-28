@@ -1,4 +1,4 @@
-<img *ngIf="fullBodyPictureShown" class="body-picture" src="assets/img/paul.png" alt="picture-paul">
+<img [hidden]="!fullBodyPictureShown" class="body-picture" src="assets/img/paul.png" alt="picture-paul">
 <div *ngIf="overlayBarsShown" class="overlay-bar overlay-bar-top"></div>
 <div *ngIf="overlayBarsShown" class="overlay-bar overlay-bar-middle"></div>
 <div *ngIf="overlayBarsShown" class="overlay-bar overlay-bar-bottom"></div>
