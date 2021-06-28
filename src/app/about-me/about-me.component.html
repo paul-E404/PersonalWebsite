@@ -9,12 +9,12 @@
             <!-- Animations window.innerWidth > 1200px -->
             <img *ngIf="!globals.middleScreenWidthReached" animateOnScroll animationName="fadeInSlideDown" src="assets/img/{{ aboutMeImageSources[i] }}" alt="about-me-image">
             <div *ngIf="!globals.middleScreenWidthReached" animateOnScroll animationName="fadeInSlideUp" class="about-me-text-box">
-                <div>{{ aboutMeTexts[i] }}</div>
+                <div [innerHTML]="aboutMeTexts[i]"></div>
             </div>
             <!-- Animations window.innerWidth <= 1200px -->
             <img *ngIf="globals.middleScreenWidthReached" animateOnScroll animationName="fadeInSlideRight" src="assets/img/{{ aboutMeImageSources[i] }}" alt="about-me-image">
             <div *ngIf="globals.middleScreenWidthReached" animateOnScroll animationName="fadeInSlideLeft" class="about-me-text-box">
-                <div>{{ aboutMeTexts[i] }}</div>
+                <div [innerHTML]="aboutMeTexts[i]"></div>
             </div>
         </div>
     </div>

@@ -47,8 +47,6 @@ h3 {
 }
 
 .email-link {
-    color: yellow;
-    font-weight: bold;
     cursor: pointer;
 }
 
@@ -148,9 +146,7 @@ h3 {
     text-align: start !important;
 
     span {
-        color: yellow;
         cursor: pointer;
-        font-weight: bold;
         
         &:hover {
             color: rgb(226, 226, 39);

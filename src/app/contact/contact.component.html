@@ -9,7 +9,7 @@
 
     <div class="section-content">
         <h3>Want to get in touch or work together? Please send an <a href="mailto:{{email}}"
-                class="email-link">email</a> or use the following contact form.</h3>
+                class="highlight email-link">email</a> or use the following contact form.</h3>
         <!-- <span>{{ singleMessage | json }}</span> -->
         <div animateOnScroll animationName="contactFormZoomIn" class="contact-form-container">
             <div [hidden]="submitted || errorMessageShown">
@@ -35,9 +35,9 @@
             </div>
             <div [hidden]="!errorMessageShown">
                 <div class="message-sent-info">Unfortunately your message could not be sent.<br>Please write directly to
-                    <a href="mailto:{{email}}" class="email-link">paul_engerling@web.de</a>.<br>Sorry for the
+                    <a href="mailto:{{email}}" class="highlight email-link">paul_engerling@web.de</a>.<br>Sorry for the
                     inconveniences!<br><br>
-                    <span (click)="backToMessage()">
+                    <span (click)="backToMessage()" class="highlight">
                         Show my message
                     </span>
                 </div>
